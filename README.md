@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Github Repo URL: [QR Code Repo](https://github.com/amyspencerproject/qr-code)
-- Live Site URL: [QR Code Page](https://amyspencerproject.github.io/qr-code/)
+- Github Repo URL: [News Homepage Code Repo](https://github.com/amyspencerproject/news-homepage)
+- Live Site URL: [News Homepage Code Page](https://amyspencerproject.github.io/news-homepage/)
 
 ## My process
 
