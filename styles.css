@@ -121,12 +121,16 @@ nav {
 .modal-content {
   background-color: var(--off-white);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(2rem, 10rem) 1fr;
+  /* grid-template-columns: 2fr 1fr; */
   grid-template-rows: 1fr;
   position: absolute;
-  right: 12%;
+  right: -5%;
   top: 45%;
   z-index: 2;
+  /* trying to get div to fill up space */
+  width: 75%;
+  height: 100vh;
 }
 
 .nav-hamburger {
@@ -142,11 +146,12 @@ nav {
 
 .nav-list {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 2rem;
   grid-column: 1 / 2;
-  grid-row: 2 / -1;
+  /* grid-row: 2 / -1; */
+  align-self: start;
   list-style-type: none;
-  padding: 0;
+  padding: 7rem 1.5rem;
   margin: 0;
 }
 

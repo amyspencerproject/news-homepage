@@ -6,6 +6,14 @@ openNav.addEventListener("click", (e) => {
   e.preventDefault(); //not sure this is need since nothing is submitted?
   openNav.style.display = "none";
   modal.classList.remove("hide");
+  closeNav.style.display = "block";
+});
+
+closeNav.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeNav.style.display = "none";
+  modal.classList.add("hide");
+  openNav.style.display = "block";
 });
 
 // event listener for a touchscreen device on nav hamburger
