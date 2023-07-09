@@ -89,6 +89,7 @@ select {
 /* ======= Base Styles ======= */
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--off-white);
 }
 
 header {
@@ -97,6 +98,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.75rem 1rem 0 1rem;
+  position: relative;
+  z-index: 0;
 }
 
 main {
@@ -111,23 +114,40 @@ p {
 
 /* ======= Navigation ======= */
 
+nav {
+  z-index: 1;
+}
+
 .modal-content {
+  background-color: var(--off-white);
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 3rem 0.5rem;
+  grid-template-rows: 1fr;
+  position: absolute;
+  right: 12%;
+  top: 45%;
+  z-index: 2;
+}
+
+.nav-hamburger {
+  background-color: transparent;
 }
 
 .nav-close {
   grid-column: 2 / -1;
-  align-self: end;
+  grid-row: 1 / -1;
+  align-self: start;
+  justify-self: center;
 }
 
 .nav-list {
   display: grid;
   row-gap: 1rem;
   grid-column: 1 / 2;
+  grid-row: 2 / -1;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-item a {
@@ -258,7 +278,7 @@ p {
   color: var(--dark-grayish-blue);
   font-size: 0.875rem;
   text-align: center;
-  margin-inline: 2rem;
+  margin-inline: 5rem;
 }
 
 .attribution a {
