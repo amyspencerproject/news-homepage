@@ -124,6 +124,7 @@ nav {
   grid-template-columns: minmax(2rem, 10rem) 1fr;
   /* grid-template-columns: 2fr 1fr; */
   grid-template-rows: 1fr;
+  overflow: clip;
   position: absolute;
   right: -5%;
   top: 45%;
@@ -222,7 +223,7 @@ nav {
 }
 
 .headline {
-  margin: 1rem 0;
+  margin: 2rem 0;
   border-bottom: solid 1px var(--grayish-blue);
 }
 
@@ -231,6 +232,10 @@ nav {
   font-weight: 700;
   color: var(--off-white);
   text-decoration: none;
+}
+
+.headline-text {
+  margin: 1rem 0 2rem 0;
 }
 
 .headline-title a:hover {
@@ -299,8 +304,11 @@ nav {
   }
 
   .modal-content {
-    display: block;
+    display: none;
     padding: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
   }
 
   .nav-list {
@@ -314,5 +322,40 @@ nav {
 
   .nav-close {
     display: none;
+  }
+
+  .headlines {
+    grid-template-columns: 2fr 1fr;
+
+    /* auto works so does 240px or 15rem */
+    grid-template-rows: 1fr auto;
+
+    /* Why doesn't 1 fr work? */
+    /* grid-template-rows: 1fr 1fr; */
+  }
+
+  .feature-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    align-self: start;
+  }
+
+  .new-wrapper {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    align-self: start;
+  }
+
+  .top-three {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    grid-template-rows: auto;
+    align-self: start;
+  }
+
+  .top-three-article {
+    grid-row: 1 / -1;
   }
 }
