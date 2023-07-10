@@ -1,10 +1,12 @@
 const openNav = document.querySelector(".nav-hamburger");
 const modal = document.querySelector(".modal-content");
+const overlay = document.querySelector("body");
 const closeNav = document.querySelector(".nav-close");
 
 openNav.addEventListener("click", (e) => {
   e.preventDefault(); //not sure this is need since nothing is submitted?
   openNav.style.display = "none";
+  overlay.classList.add("overlay");
   modal.classList.remove("hide");
   closeNav.style.display = "block";
 });
@@ -12,6 +14,7 @@ openNav.addEventListener("click", (e) => {
 closeNav.addEventListener("click", (e) => {
   e.preventDefault();
   closeNav.style.display = "none";
+  overlay.classList.remove("overlay");
   modal.classList.add("hide");
   openNav.style.display = "block";
 });
@@ -20,7 +23,7 @@ closeNav.addEventListener("click", (e) => {
 // maybe build with "click" so it can be tested and then switch to touchstart
 // hide nav hamburger
 // open modal div
-// put large bos-shadow on the rest of page behind modal
+// put large box-shadow on the rest of page behind modal
 // keep modal div open
 // event listener on nav close
 // hide modal
