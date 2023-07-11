@@ -21,3 +21,26 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const openNav = document.querySelector(".nav-hamburger");
+  const modal = document.querySelector(".modal-content");
+  const overlay = document.querySelector("body");
+  const closeNav = document.querySelector(".nav-close");
+
+  openNav.addEventListener("click", (e) => {
+    e.preventDefault(); //not sure this is need since nothing is submitted?
+    openNav.style.display = "none";
+    overlay.classList.add("overlay");
+    modal.classList.remove("hide");
+    closeNav.style.display = "block";
+  });
+
+  closeNav.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeNav.style.display = "none";
+    overlay.classList.remove("overlay");
+    modal.classList.add("hide");
+    openNav.style.display = "block";
+  });
+</script>

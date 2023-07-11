@@ -1,30 +1,33 @@
-const openNav = document.querySelector(".nav-hamburger");
 const modal = document.querySelector(".modal-content");
 const overlay = document.querySelector("body");
+
+const navButton = document.getElementById("js-nav-btn");
+const openNav = document.querySelector(".nav-open");
 const closeNav = document.querySelector(".nav-close");
 
-openNav.addEventListener("click", (e) => {
-  e.preventDefault(); //not sure this is need since nothing is submitted?
-  openNav.style.display = "none";
-  overlay.classList.add("overlay");
-  modal.classList.remove("hide");
-  closeNav.style.display = "block";
-});
+// function to handle the button toggle using the aria-expanded boolean
 
-closeNav.addEventListener("click", (e) => {
-  e.preventDefault();
-  closeNav.style.display = "none";
-  overlay.classList.remove("overlay");
-  modal.classList.add("hide");
-  openNav.style.display = "block";
-});
+const toggleButton = () => {
+  const ariaExpanded = navButton.getAttribute("aria-expanded");
+  console.log("Something worked! 🚀");
 
-// event listener for a touchscreen device on nav hamburger
-// maybe build with "click" so it can be tested and then switch to touchstart
-// hide nav hamburger
-// open modal div
-// put large box-shadow on the rest of page behind modal
-// keep modal div open
-// event listener on nav close
-// hide modal
-// return nav hamburger
+  if (ariaExpanded == "false") {
+    console.log("This part of the function is working!🔥");
+    navButton.setAttribute("aria-expanded", "true");
+    openNav.classList.add("hide");
+    closeNav.classList.remove("hide");
+    modal.classList.remove("hide");
+    overlay.classList.add("overlay");
+  } else {
+    navButton.setAttribute("aria-expanded", "false");
+    openNav.classList.remove("hide");
+    closeNav.classList.add("hide");
+    modal.classList.add("hide");
+    overlay.classList.remove("overlay");
+    console.log("The other part of the function is working!🥳");
+  }
+};
+
+navButton.addEventListener("click", (e) => {
+  toggleButton();
+});

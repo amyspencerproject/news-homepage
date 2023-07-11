@@ -23,6 +23,7 @@ Users should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
+- **Bonus**: Toggle the mobile menu (requires some JavaScript)
 
 ### Screenshot
 
@@ -34,6 +35,10 @@ Users should be able to:
 - Live Site URL: [News Homepage Code Page](https://amyspencerproject.github.io/news-homepage/)
 
 ## My process
+
+- Chose to use quite a git of CSS Grid for this challenge. I need the practice with Grid and the design is 2D with defined columns and rows.
+- Since this is only my second time building a modal nav option I decided to get thru it and then go back and refactor the solution. My goal was to learn how to make the modal navigation more accessible and more efficiently coded.
+- The modal has a hamburger icon button to open and an X icon button to close. My first pass thru the challenge I put the X close button inside the modal div. This format require a lot of grid styling that was awkward. I wanted to just be able to swap out the icon files for the open hamburger and the close X inside of the same button div.
 
 ### Built with
 
