@@ -36,10 +36,6 @@ Users should be able to:
 
 ## My process
 
-- Chose to use quite a git of CSS Grid for this challenge. I need the practice with Grid and the design is 2D with defined columns and rows.
-- Since this is only my second time building a modal nav option I decided to get thru it and then go back and refactor the solution. My goal was to learn how to make the modal navigation more accessible and more efficiently coded.
-- The modal has a hamburger icon button to open and an X icon button to close. My first pass thru the challenge I put the X close button inside the modal div. This format require a lot of grid styling that was awkward. I wanted to just be able to swap out the icon files for the open hamburger and the close X inside of the same button div.
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -49,7 +45,21 @@ Users should be able to:
 
 ### What I learned
 
--
+- Chose to use quite a git of CSS Grid for this challenge. I need the practice with Grid and the design is 2D with defined columns and rows.
+- Since this is only my second time building a modal nav option I decided to get thru it and then go back and refactor the solution. My goal was to learn how to make the modal navigation more accessible and more efficiently coded.
+- The modal has a hamburger icon button to open and an X icon button to close. My first pass thru the challenge I put the X close button inside the modal div. This format require a lot of grid styling that was awkward. I wanted to just be able to swap out the icon files for the open hamburger and the close X inside of the same button div.
+  - This was fairly easy. Both images were place inside the button div. The hamburger icon was give a class of "nav-open" and the X icons was given two classes, "hide" and "nav-close". Then JS was used to toggle between adding or removing the hide from each of the div classes.
+- My first pass thru had very step wise JS directions. There were two eventListeners, one for opening the modal and one for closing the modal. This was accomplished by making a variable for every element class or id that either needed to be hidden or made visible.
+  - Using the aria-expanded attribute on the now single button div allowed for boolean logic to toggle the "hide" class on and off. I made a function called toggleButton that would run with just a single event listener.
+- I took things a step further with the boolean aria-expanded attribute and added a terniary expression and a step to change the value.
+
+```
+const expandedToggle = navButton.getAttribute("aria-expanded") === "true" ? true : false;
+navButton.setAttribute("aria-expanded", !expandedToggle);
+
+```
+
+- This expression says if the aria-expanded value is true then change it to false and vice versa. This allowed me to get rid of all my if/else statements for hiding and showing elements based on the value of aria-expanded attribute. All that is taken care of with `classList.toggle()`
 
 ### Continued development
 
@@ -62,3 +72,7 @@ Users should be able to:
 - Website - [Amy Spencer](https://spencerproject.com/)
 - Frontend Mentor - [@amyspencerproject](https://www.frontendmentor.io/profile/amyspencerproject)
 - Linkedin - [amyspencercodes](https://www.linkedin.com/in/amyspencercodes/)
+
+```
+
+```

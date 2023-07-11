@@ -43,4 +43,20 @@
     modal.classList.add("hide");
     openNav.style.display = "block";
   });
+
+  if (ariaExpanded === "false") {
+    console.log("This part of the function is working!🔥");
+    navButton.setAttribute("aria-expanded", "true");
+    openNav.classList.add("hide");
+    closeNav.classList.remove("hide");
+    modal.classList.remove("hide");
+    overlay.classList.add("overlay");
+  } else {
+    navButton.setAttribute("aria-expanded", "false");
+    openNav.classList.remove("hide");
+    closeNav.classList.add("hide");
+    modal.classList.add("hide");
+    overlay.classList.remove("overlay");
+    console.log("The other part of the function is working!🥳");
+  }
 </script>
