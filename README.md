@@ -50,7 +50,7 @@ Mobile toggle view
   - This was fairly easy. Both images were place inside the button div. The hamburger icon was give a class of "nav-open" and the X icons was given two classes, "hide" and "nav-close". Then JS was used to toggle between adding or removing the hide from each of the div classes.
 - My first pass thru had very step wise JS directions. There were two eventListeners, one for opening the modal and one for closing the modal. This was accomplished by making a variable for every element class or id that either needed to be hidden or made visible.
   - Using the aria-expanded attribute on the now single button div allowed for boolean logic to toggle the "hide" class on and off. I made a function called toggleButton that would run with just a single event listener.
-- I took things a step further with the boolean aria-expanded attribute and added a terniary expression and a step to change the value.
+- I took things a step further with the boolean aria-expanded attribute and added a ternary expression and a step to change the value.
 
 ```
 const expandedToggle = navButton.getAttribute("aria-expanded") === "true" ? true : false;
@@ -59,6 +59,8 @@ navButton.setAttribute("aria-expanded", !expandedToggle);
 ```
 
 - This expression says if the aria-expanded value is true then change it to false and vice versa. This allowed me to get rid of all my if/else statements for hiding and showing elements based on the value of aria-expanded attribute. All that is taken care of with `classList.toggle()`
+
+- My code had a warning when checked for accessibility. Inside of the `<nav>` I had designated the modal div surrounding the `<ul>` with `role="navigation"` which is like calling out navigation twice on for a screen reader. I removed the `role="navigation"`. I also learned that Chrome dev tools has an accessibility tool that lets you look at what the screen reader will be reading with regards to your elements.
 
 ## Author
 
