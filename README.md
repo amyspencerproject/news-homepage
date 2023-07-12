@@ -11,8 +11,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued Development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -27,7 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/screenshot%20mobile%20toggle%20navigation.png)
+Mobile toggle view
 
 ### Links
 
@@ -45,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-- Chose to use quite a git of CSS Grid for this challenge. I need the practice with Grid and the design is 2D with defined columns and rows.
+- Chose to use quite a bit of CSS Grid for this challenge. I need the practice with Grid and the design is 2D with defined columns and rows.
 - Since this is only my second time building a modal nav option I decided to get thru it and then go back and refactor the solution. My goal was to learn how to make the modal navigation more accessible and more efficiently coded.
 - The modal has a hamburger icon button to open and an X icon button to close. My first pass thru the challenge I put the X close button inside the modal div. This format require a lot of grid styling that was awkward. I wanted to just be able to swap out the icon files for the open hamburger and the close X inside of the same button div.
   - This was fairly easy. Both images were place inside the button div. The hamburger icon was give a class of "nav-open" and the X icons was given two classes, "hide" and "nav-close". Then JS was used to toggle between adding or removing the hide from each of the div classes.
@@ -61,18 +60,8 @@ navButton.setAttribute("aria-expanded", !expandedToggle);
 
 - This expression says if the aria-expanded value is true then change it to false and vice versa. This allowed me to get rid of all my if/else statements for hiding and showing elements based on the value of aria-expanded attribute. All that is taken care of with `classList.toggle()`
 
-### Continued development
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-
 ## Author
 
 - Website - [Amy Spencer](https://spencerproject.com/)
 - Frontend Mentor - [@amyspencerproject](https://www.frontendmentor.io/profile/amyspencerproject)
 - Linkedin - [amyspencercodes](https://www.linkedin.com/in/amyspencercodes/)
-
-```
-
-```
